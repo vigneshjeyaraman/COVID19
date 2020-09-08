@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container jumbotron">
+        <form method="POST">{% csrf_token %}
+            <select id="country" name="country">
+            {% for country in countries %}
+                {% if country.name == selected %}
+                    <option value = {{ country.id }} selected="selected">{{ country.name }}</option>    
+                {% else %}
+                    <option value = {{ country.id }}>{{ country.name }}</option>
+                {% endif %}
+            {% endfor %}
+            </select>
+            <input type="Submit" />
+        </form>
+    {% if stats %}
+        <p> <strong>Country:</strong> {{ stats.country}}</p>
+        <p> <strong>Confirmed:</strong> {{ stats.confirmed}}</p>
+        <p> <strong>Active:</strong> {{ stats.active}}</p>
+        <p> <strong>Deaths:</strong> {{ stats.deaths}}</p>
+        <p> <strong>Recovered:</strong> {{ stats.recovered}}</p>
+    {% endif %}
+    </div>
+{% endblock content %}

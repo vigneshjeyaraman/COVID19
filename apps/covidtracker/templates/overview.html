@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container jumbotron">
+        <h3>
+            Total active cases world wide:
+            <small class="text-muted">{{ active }}</small>
+        </h3>
+        <h3>
+            Total confirmed cases world wide:
+            <small class="text-muted">{{ confirmed }}</small>
+        </h3>
+        <h3>
+            Total recovery world wide:
+            <small class="text-muted">{{ recovered }}</small>
+        </h3>
+        <h3>
+            Total deaths so far world wide:
+            <small class="text-muted">{{ death }}</small>
+        </h3>
+    </div>
+{% endblock content %}
