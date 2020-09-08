@@ -27,3 +27,4 @@ Setting up this is very easy.
 7. Now open localhost:8000 on your web browser.
 
 ## It is using Python's Covid module which has inbuilt function to fetch all the required data. We haven't used any DB in this.
+https://pypi.org/project/covid/
