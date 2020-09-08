@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="container jumbotron">
+        {% if last_updated %}
+            <h3><span class="badge badge-primary">Data last updated: {{ last_updated }}(utc)</span></h3>
+        {% endif %}
         <form method="POST">{% csrf_token %}
             <select id="country" name="country">
             {% for country in countries %}
