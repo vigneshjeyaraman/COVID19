@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class='container jumbotron'>
-        <h3><span class="badge badge-primary">Data last updated: {{ last_updated }}(utc)</span></h3>
+        <span class="badge badge-primary">Data last updated: {{ last_updated }}(utc)</span>
         <img src="data:image/png;base64,{{image_base64}}" alt="Covid cases" width=100% height=auto />
     </div>
 {% endblock content %}
